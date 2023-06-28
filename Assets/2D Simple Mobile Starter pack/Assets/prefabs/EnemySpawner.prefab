@@ -44,6 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71b913020ce1145f3bd83880a42d9928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offset: {x: 0, y: 0, z: 0}
+  onTopOfScreen: 1
   enemyPrefab: []
-  spawnRate: 1
-  yOffSet: 1
+  randomizeEnemyPrefab: 1
+  minimumSpawnRate: 1
+  rateIncreaseCause: 1
+  rateIncreaseType: 1
+  exponentialRateMultiplier: 0.16666667
+  spawnPoints: []
+  spawnOnRandomPoints: 0
+  spawnArea: {fileID: 0}
+  spawnType: 1

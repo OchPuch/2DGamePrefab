@@ -29,7 +29,7 @@ public class BorderScript : MonoBehaviour
     [SerializeField] private FitType fitType = FitType.ToScreen;
 
     [FormerlySerializedAs("collider")] [Header("References")] [SerializeField]
-    private new BoxCollider2D ownCollider2D;
+    private BoxCollider2D ownCollider2D;
 
     [SerializeField] private BoxCollider2D mapCollider2D;
 

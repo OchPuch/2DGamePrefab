@@ -1,0 +1,20 @@
+{
+  "name": "com.ochpuch.2dsimplemobilegamestarterpack",
+  "version": "1.0.0",
+  "displayName": "2D Simple Mobile Game Starter Pack",
+  "description": "A simple 2D mobile game starter pack. No game logic included.",
+  "unity": "2021.3",
+  "unityRelease": "27f1",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6"
+  },
+  "keywords": [
+    "untiy",
+    "2d",
+    "mobile"
+  ],
+  "author": {
+    "name": "Ochpuch",
+    "email": "ochpuch@gmail.com"
+  }
+}

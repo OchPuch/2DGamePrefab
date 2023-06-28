@@ -1,7 +1,7 @@
 using Managers;
 using UnityEngine;
 
-namespace GUI
+namespace _2D_Simple_Mobile_Starter_pack.GUI
 {
     public class ScoreGUI : MonoBehaviour
     {

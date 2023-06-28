@@ -1,10 +1,9 @@
-
 using Managers;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
-namespace GUI
+namespace _2D_Simple_Mobile_Starter_pack.GUI
+
 {
     public class HighScoreGUI : MonoBehaviour
     {
