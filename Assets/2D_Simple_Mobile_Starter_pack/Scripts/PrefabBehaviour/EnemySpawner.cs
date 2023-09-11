@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 
 namespace _2D_Simple_Mobile_Starter_pack.Scripts.PrefabBehaviour
 {
+    //Dont use this script at all. Ill fix it later
+    [Obsolete]
     public class EnemySpawner : MonoBehaviour
     {
         private float leftX;
@@ -63,7 +65,7 @@ namespace _2D_Simple_Mobile_Starter_pack.Scripts.PrefabBehaviour
         void Start()
         {
             if (onTopOfScreen) ToTheTopOfTheScreen();
-            if (spawnType is SpawnType.ByFullScreen or SpawnType.ByScreenHeight or SpawnType.ByScreenWidth) SetScreenBounds();
+            if (spawnType == SpawnType.ByFullScreen || spawnType == SpawnType.ByScreenHeight || spawnType == SpawnType.ByScreenWidth) SetScreenBounds();
             GameManager.Instance.OnGameStart += OnGameStarted;
             if (GameManager.Instance.gameState == GameManager.GameState.Play) OnGameStarted();
         }

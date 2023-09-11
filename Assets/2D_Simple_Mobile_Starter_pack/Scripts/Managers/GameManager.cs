@@ -1,12 +1,17 @@
 using System;
 using UnityEngine;
+using UnityEngine.Experimental.GlobalIllumination;
 using UnityEngine.SceneManagement;
+using Screen = UnityEngine.Device.Screen;
 
 namespace _2D_Simple_Mobile_Starter_pack.Scripts.Managers
 {
     public class GameManager : MonoBehaviour
     {
         public static GameManager Instance;
+        [Header("Application settings")]
+        public ScreenOrientation screenOrientation = ScreenOrientation.LandscapeLeft;
+        public int targetFrameRate = 60;
         
         public enum GameState
         {
@@ -32,6 +37,10 @@ namespace _2D_Simple_Mobile_Starter_pack.Scripts.Managers
         private void Awake()
         {
             if (!Instance) Instance = this;
+            
+            Application.targetFrameRate = targetFrameRate;
+            Screen.orientation = screenOrientation;
+            
             OnScoreChange += AddScore;
             OnGameOver += OnGameEnd;
             OnGameStart += OnGameBegin;
@@ -56,7 +65,7 @@ namespace _2D_Simple_Mobile_Starter_pack.Scripts.Managers
         private void OnGameEnd()
         {
             gameState = GameState.End;
-            if (restartOnGameOver) SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (restartOnGameOver) ForceRestart();
         }
     
         private void OnGameBegin()
